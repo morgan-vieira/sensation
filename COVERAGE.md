@@ -7,12 +7,12 @@ needed.
 
 ## Theme
 
-| Component       | Description                                                                    | Status         | Plan | Notes                                                                          |
-| --------------- | ------------------------------------------------------------------------------ | -------------- | ---- | ------------------------------------------------------------------------------ |
-| 📌 ThemePalette | Oklab/Oklch color palette pre-computed across z-depth levels                   | ⏳ Planned     | ➕   | Color math ports directly to JS; output as CSS custom properties per elevation |
-| 📌 ThemeContext | Per-component color context — bg, fg, accent, grey resolved at a given z-depth | ⏳ Planned     | ➕   | React Context; consumers read CSS vars rather than computed Color3 values      |
-| makeIconTheme   | Icon-specific theme derivation (background/foreground slots for icon players)  | ⏳ Planned     | 🔁   | Only needed once an icon system is defined                                     |
-| Plugin palette  | Light/dark detection from Roblox Studio's active theme                         | ❌ Not porting | ➖   | Replaced by `prefers-color-scheme` and/or a user-controlled toggle             |
+| Component       | Description                                                                    | Status         | Plan | Notes                                                                                              |
+| --------------- | ------------------------------------------------------------------------------ | -------------- | ---- | -------------------------------------------------------------------------------------------------- |
+| 📌 ThemePalette | Oklab/Oklch color palette pre-computed across z-depth levels                   | ✅ Done        | ➕   | `createPalette` / `createLightPalette` / `createDarkPalette`; outputs native CSS `oklch()` strings |
+| 📌 ThemeContext | Per-component color context — bg, fg, accent, grey resolved at a given z-depth | ✅ Done        | ➕   | `ThemeProvider` (root), `SurfaceTheme` / `useSurface` (elevation); CSS `--sn-*` custom properties  |
+| makeIconTheme   | Icon-specific theme derivation (background/foreground slots for icon players)  | ⏳ Planned     | 🔁   | Only needed once an icon system is defined                                                         |
+| Plugin palette  | Light/dark detection from Roblox Studio's active theme                         | ❌ Not porting | ➖   | Replaced by `usePrefersDark` hook (`prefers-color-scheme` via `useSyncExternalStore`)              |
 
 ## Foundation
 
