@@ -1,0 +1,6 @@
+--!strict
+-- (c) Studio Elttob 2024. All rights reserved, seek permission before use.
+
+return {
+	sheen = ""
+}
