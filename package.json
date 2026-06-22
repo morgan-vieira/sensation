@@ -7,15 +7,19 @@
 		".": {
 			"types": "./dist/index.d.ts",
 			"import": "./dist/index.js"
-		}
+		},
+		"./style.css": "./dist/style.css"
 	},
 	"files": [
 		"dist"
 	],
 	"sideEffects": false,
 	"scripts": {
-		"build": "tsup",
-		"dev": "tsup --watch",
+		"build:js": "tsup",
+		"build:css": "tailwindcss -i src/style.css -o dist/style.css --minify",
+		"build": "npm run build:js && npm run build:css",
+		"dev:js": "tsup --watch",
+		"dev:css": "tailwindcss -i src/style.css -o dist/style.css --watch",
 		"typecheck": "tsc --noEmit",
 		"format": "prettier --write .",
 		"format:check": "prettier --check .",
@@ -26,12 +30,14 @@
 		"react-dom": ">=19.0.0"
 	},
 	"devDependencies": {
+		"@tailwindcss/cli": "^4.3.1",
 		"@types/node": "^26.0.0",
 		"@types/react": "^19.2.17",
 		"@types/react-dom": "^19.2.3",
 		"prettier": "^3.8.4",
 		"react": "^19.2.7",
 		"react-dom": "^19.2.7",
+		"tailwindcss": "^4.3.1",
 		"tsup": "^8.5.1",
 		"tsx": "^4.22.4",
 		"typescript": "^6.0.3"
