@@ -1,0 +1,4 @@
+--!strict
+-- (c) Studio Elttob 2024. All rights reserved, seek permission before use.
+
+return debug.traceback():find("Elttob Suite Development Environment", nil, true) ~= nil
