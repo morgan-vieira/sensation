@@ -2,9 +2,11 @@
 
 ## Task Completion Requirements
 
+- `npm run format:check` must pass before considering tasks completed.
+
 ## Project Snapshop
 
-`@morgan-vieira/sensation` is a...
+`@morgan-vieira/sensation` is a React 19+ component library inspired by RbxSensation, a Roblox UI library by Studio Elttob.
 
 ## Vendored Repositories
 

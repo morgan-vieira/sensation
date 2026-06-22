@@ -1,19 +1,39 @@
 {
-  "name": "@morgan-vieira/sensation",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sync:repos": "tsx scripts/sync-repos.ts"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "module",
-  "devDependencies": {
-    "@types/node": "^26.0.0",
-    "tsx": "^4.22.4",
-    "typescript": "^6.0.3"
-  }
+	"name": "@morgan-vieira/sensation",
+	"version": "0.0.1",
+	"description": "React 19+ component library inspired by RbxSensation",
+	"type": "module",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"sideEffects": false,
+	"scripts": {
+		"build": "tsup",
+		"dev": "tsup --watch",
+		"typecheck": "tsc --noEmit",
+		"format": "prettier --write .",
+		"format:check": "prettier --check .",
+		"sync:repos": "tsx scripts/sync-repos.ts"
+	},
+	"peerDependencies": {
+		"react": ">=19.0.0",
+		"react-dom": ">=19.0.0"
+	},
+	"devDependencies": {
+		"@types/node": "^26.0.0",
+		"@types/react": "^19.2.17",
+		"@types/react-dom": "^19.2.3",
+		"prettier": "^3.8.4",
+		"react": "^19.2.7",
+		"react-dom": "^19.2.7",
+		"tsup": "^8.5.1",
+		"tsx": "^4.22.4",
+		"typescript": "^6.0.3"
+	}
 }
