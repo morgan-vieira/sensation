@@ -3,6 +3,27 @@
 	"version": "0.0.1",
 	"description": "React 19+ component library inspired by RbxSensation",
 	"type": "module",
+	"license": "MIT",
+	"author": "morgan-vieira",
+	"homepage": "https://github.com/morgan-vieira/sensation#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/morgan-vieira/sensation.git"
+	},
+	"bugs": {
+		"url": "https://github.com/morgan-vieira/sensation/issues"
+	},
+	"keywords": [
+		"react",
+		"component-library",
+		"ui",
+		"design-system",
+		"oklch",
+		"tailwind"
+	],
+	"engines": {
+		"node": ">=20"
+	},
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
