@@ -10,7 +10,8 @@
 		"skipLibCheck": true,
 		"declaration": true,
 		"declarationMap": true,
-		"ignoreDeprecations": "6.0"
+		"ignoreDeprecations": "6.0",
+		"types": ["vitest/globals", "@testing-library/jest-dom"]
 	},
 	"include": ["src"],
 	"exclude": ["node_modules", "dist"]

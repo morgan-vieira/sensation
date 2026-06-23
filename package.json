@@ -20,9 +20,13 @@
 		"build": "npm run build:js && npm run build:css",
 		"dev:js": "tsup --watch",
 		"dev:css": "tailwindcss -i src/style.css -o dist/style.css --watch",
+		"test": "vitest",
+		"test:run": "vitest run",
 		"typecheck": "tsc --noEmit",
 		"format": "prettier --write .",
 		"format:check": "prettier --check .",
+		"storybook": "storybook dev -p 6006",
+		"storybook:build": "storybook build",
 		"sync:repos": "tsx scripts/sync-repos.ts"
 	},
 	"peerDependencies": {
@@ -30,16 +34,27 @@
 		"react-dom": ">=19.0.0"
 	},
 	"devDependencies": {
+		"@storybook/addon-docs": "^10.4.6",
+		"@storybook/react-vite": "^10.4.6",
 		"@tailwindcss/cli": "^4.3.1",
+		"@tailwindcss/vite": "^4.3.1",
+		"@testing-library/jest-dom": "^6.9.1",
+		"@testing-library/react": "^16.3.2",
+		"@testing-library/user-event": "^14.6.1",
 		"@types/node": "^26.0.0",
 		"@types/react": "^19.2.17",
 		"@types/react-dom": "^19.2.3",
+		"@vitejs/plugin-react": "^6.0.2",
+		"jsdom": "^29.1.1",
 		"prettier": "^3.8.4",
 		"react": "^19.2.7",
 		"react-dom": "^19.2.7",
+		"storybook": "^10.4.6",
 		"tailwindcss": "^4.3.1",
 		"tsup": "^8.5.1",
 		"tsx": "^4.22.4",
-		"typescript": "^6.0.3"
+		"typescript": "^6.0.3",
+		"vite": "^8.0.16",
+		"vitest": "^4.1.9"
 	}
 }
