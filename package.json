@@ -1,6 +1,6 @@
 {
 	"name": "@morgan-vieira/sensation",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "React 19+ component library inspired by RbxSensation",
 	"type": "module",
 	"license": "MIT",
