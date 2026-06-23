@@ -16,22 +16,22 @@ needed.
 
 ## Foundation
 
-| Component      | Description                                                                      | Status     | Plan | Notes                                                       |
-| -------------- | -------------------------------------------------------------------------------- | ---------- | ---- | ----------------------------------------------------------- |
-| 📌 Button      | Pressable button with illuminated, flat, and subtle variants; optional icon slot | ⏳ Planned | ➕   |                                                             |
-| 📌 Text        | Text label with style variants: normal, grey, heading, accent, atopAccent        | ⏳ Planned | ➕   | `<span>` with theme-derived color; heading bumps font size  |
-| 📌 TextField   | Single-line text input                                                           | ⏳ Planned | ➕   | `<input type="text">`                                       |
-| 📌 Panel       | Background surface that steps up one z-depth level                               | ⏳ Planned | ➕   | `<div>` with elevation background color from ThemeContext   |
-| Divider        | Thin horizontal or vertical separator                                            | ⏳ Planned | ➕   | `<hr>` or styled `<div>`                                    |
-| Spacer         | Flexible empty space for filling a flex/grid gap                                 | ⏳ Planned | ➕   | `<div style={{ flex: 1 }}>`                                 |
-| Bullet         | Small dot or marker for list-like layouts                                        | ⏳ Planned | ➕   |                                                             |
-| Expander       | Collapsible section with animated open/close                                     | ⏳ Planned | ➕   | `<details>` or animated `<div>` via CSS transition          |
-| LoadingSpinner | Animated loading indicator                                                       | ⏳ Planned | ➕   | CSS keyframe animation                                      |
-| 📌 Switch      | Toggle switch (on/off)                                                           | ⏳ Planned | ➕   | Styled `<input type="checkbox">`                            |
-| 📌 Scroller    | Scrollable container with themed custom scrollbar                                | ⏳ Planned | ➕   | CSS `overflow` + `::-webkit-scrollbar` or overlay scrollbar |
-| ScrollCarousel | Horizontally scrollable carousel strip                                           | ⏳ Planned | 🔁   |                                                             |
-| ScrollTrack    | Scroll thumb and track UI (used inside Scroller)                                 | ⏳ Planned | ➕   | Part of Scroller implementation                             |
-| VirtualList    | Virtualized list for large datasets                                              | ⏳ Planned | 🔁   | May defer to TanStack Virtual rather than porting           |
+| Component      | Description                                                                      | Status     | Plan | Notes                                                                           |
+| -------------- | -------------------------------------------------------------------------------- | ---------- | ---- | ------------------------------------------------------------------------------- |
+| 📌 Button      | Pressable button with illuminated, flat, and subtle variants; optional icon slot | ⏳ Planned | ➕   |                                                                                 |
+| 📌 Text        | Text label with style variants: normal, grey, heading, accent, atopAccent        | ⏳ Planned | ➕   | `<span>` with theme-derived color; heading bumps font size                      |
+| 📌 TextField   | Single-line text input                                                           | ⏳ Planned | ➕   | `<input type="text">`                                                           |
+| 📌 Panel       | Background surface that steps up one z-depth level                               | ⏳ Planned | ➕   | `<div>` with elevation background color from ThemeContext                       |
+| Divider        | Thin horizontal or vertical separator                                            | ✅ Done    | ➕   | `role="separator"` div; 1px, `vars.fg` at 20% opacity; horizontal/vertical prop |
+| Spacer         | Flexible empty space for filling a flex/grid gap                                 | ✅ Done    | ➕   | `aria-hidden` div; `size` prop sets both width and height                       |
+| Bullet         | Small dot or marker for list-like layouts                                        | ✅ Done    | ➕   | 4×4px circle at (2, 8); content offset 12px; arbitrary children                 |
+| Expander       | Collapsible section with animated open/close                                     | ⏳ Planned | ➕   | `<details>` or animated `<div>` via CSS transition                              |
+| LoadingSpinner | Animated loading indicator                                                       | ⏳ Planned | ➕   | CSS keyframe animation                                                          |
+| 📌 Switch      | Toggle switch (on/off)                                                           | ⏳ Planned | ➕   | Styled `<input type="checkbox">`                                                |
+| 📌 Scroller    | Scrollable container with themed custom scrollbar                                | ⏳ Planned | ➕   | CSS `overflow` + `::-webkit-scrollbar` or overlay scrollbar                     |
+| ScrollCarousel | Horizontally scrollable carousel strip                                           | ⏳ Planned | 🔁   |                                                                                 |
+| ScrollTrack    | Scroll thumb and track UI (used inside Scroller)                                 | ⏳ Planned | ➕   | Part of Scroller implementation                                                 |
+| VirtualList    | Virtualized list for large datasets                                              | ⏳ Planned | 🔁   | May defer to TanStack Virtual rather than porting                               |
 
 ## Compound
 
