@@ -1,25 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react-vite"
-import {
-	ThemeProvider,
-	createLightPalette,
-	createDarkPalette,
-	vars,
-} from "../../theme"
 import { Panel } from "../../foundation/panel"
 import { Text } from "../../foundation/text"
 
 const meta: Meta<typeof Panel> = {
 	title: "Foundation/Panel",
 	component: Panel,
-	decorators: [
-		(Story) => (
-			<ThemeProvider palette={createLightPalette(240)}>
-				<div style={{ padding: 32, background: vars.bg }}>
-					<Story />
-				</div>
-			</ThemeProvider>
-		),
-	],
 }
 
 export default meta
@@ -58,15 +43,7 @@ export const Nested: Story = {
 }
 
 export const Dark: Story = {
-	decorators: [
-		(Story) => (
-			<ThemeProvider palette={createDarkPalette(240)}>
-				<div style={{ padding: 32, background: vars.bg }}>
-					<Story />
-				</div>
-			</ThemeProvider>
-		),
-	],
+	globals: { colorScheme: "dark" },
 	render: () => (
 		<Panel>
 			<div style={{ padding: 16 }}>

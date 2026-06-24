@@ -18,7 +18,7 @@ needed.
 
 | Component      | Description                                                                      | Status     | Plan | Notes                                                                                                |
 | -------------- | -------------------------------------------------------------------------------- | ---------- | ---- | ---------------------------------------------------------------------------------------------------- |
-| 📌 Button      | Pressable button with illuminated, flat, and subtle variants; optional icon slot | ⏳ Planned | ➕   |                                                                                                      |
+| 📌 Button      | Pressable button with illuminated, flat, and subtle variants; optional icon slot | ✅ Done    | ➕   | `role="button"`; Bevel + GestureSurface overlays; subtle raises on hover; keyboard accessible        |
 | 📌 Text        | Text label with style variants: normal, grey, heading, accent, atopAccent        | ✅ Done    | ➕   | `<span>` with theme-derived color; heading bumps font size; `richText` via `dangerouslySetInnerHTML` |
 | 📌 TextField   | Single-line text input                                                           | ⏳ Planned | ➕   | `<input type="text">`                                                                                |
 | 📌 Panel       | Background surface that steps up one z-depth level                               | ✅ Done    | ➕   | `<div>` with `vars.bg` background and `border-radius: 8px`; elevates z-depth via `useSurface`        |
@@ -44,23 +44,23 @@ needed.
 
 ## FX
 
-| Component         | Description                                     | Status     | Plan | Notes                                                                   |
-| ----------------- | ----------------------------------------------- | ---------- | ---- | ----------------------------------------------------------------------- |
-| 📌 Bevel          | Raised-edge highlight that conveys elevation    | ⏳ Planned | ➕   | CSS `box-shadow` inset highlight or `border-top`/`border-left` gradient |
-| Halo              | Soft glow radiating from a surface              | ⏳ Planned | ➕   | CSS `box-shadow` with spread or `filter: drop-shadow`                   |
-| Shadow            | Drop shadow beneath a surface                   | ⏳ Planned | ➕   | CSS `box-shadow`                                                        |
-| LightweightCanvas | Minimal compositing surface for custom drawing  | ⏳ Planned | 🔁   | `<canvas>` or CSS `isolation: isolate` layer                            |
-| OverlayPortal     | Renders children into a top-level overlay layer | ⏳ Planned | ➕   | `ReactDOM.createPortal` to a `#overlay` root                            |
-| TransitionBox     | Container that animates content changes         | ⏳ Planned | ➕   | CSS transitions on opacity/transform                                    |
-| FadeTransition    | Declarative fade in/out                         | ⏳ Planned | ➕   | CSS `opacity` transition                                                |
-| ManualTransition  | Imperatively controlled transition              | ⏳ Planned | 🔁   | Exposed via a ref handle                                                |
+| Component         | Description                                     | Status     | Plan | Notes                                                                                                                    |
+| ----------------- | ----------------------------------------------- | ---------- | ---- | ------------------------------------------------------------------------------------------------------------------------ |
+| 📌 Bevel          | Raised-edge highlight that conveys elevation    | ✅ Done    | ➕   | `position: absolute; inset: 0` overlay; `box-shadow: inset` top/bottom; `height` (-1–1) controls intensity and direction |
+| Halo              | Soft glow radiating from a surface              | ⏳ Planned | ➕   | CSS `box-shadow` with spread or `filter: drop-shadow`                                                                    |
+| Shadow            | Drop shadow beneath a surface                   | ⏳ Planned | ➕   | CSS `box-shadow`                                                                                                         |
+| LightweightCanvas | Minimal compositing surface for custom drawing  | ⏳ Planned | 🔁   | `<canvas>` or CSS `isolation: isolate` layer                                                                             |
+| OverlayPortal     | Renders children into a top-level overlay layer | ⏳ Planned | ➕   | `ReactDOM.createPortal` to a `#overlay` root                                                                             |
+| TransitionBox     | Container that animates content changes         | ⏳ Planned | ➕   | CSS transitions on opacity/transform                                                                                     |
+| FadeTransition    | Declarative fade in/out                         | ⏳ Planned | ➕   | CSS `opacity` transition                                                                                                 |
+| ManualTransition  | Imperatively controlled transition              | ⏳ Planned | 🔁   | Exposed via a ref handle                                                                                                 |
 
 ## Input
 
-| Component         | Description                                         | Status         | Plan | Notes                                                   |
-| ----------------- | --------------------------------------------------- | -------------- | ---- | ------------------------------------------------------- |
-| 📌 GestureSurface | Hover and press capture layer with themed highlight | ⏳ Planned     | ➕   | `onPointerEnter` / `onPointerLeave` / `onClick`         |
-| OnHover           | Hover state subscription                            | ⏳ Planned     | ➕   | `useHover` hook                                         |
-| OnDrag            | Pointer drag tracking with delta and position       | ⏳ Planned     | ➕   | `useDrag` hook using Pointer Events                     |
-| MouseTracker      | Global pointer position tracking                    | ⏳ Planned     | 🔁   | `usePointerPosition` hook                               |
-| MousePredictor    | Predictive pointer position to mask input latency   | ❌ Not porting | ➖   | A Roblox network-latency concern; not applicable on web |
+| Component         | Description                                         | Status         | Plan | Notes                                                                                                     |
+| ----------------- | --------------------------------------------------- | -------------- | ---- | --------------------------------------------------------------------------------------------------------- |
+| 📌 GestureSurface | Hover and press capture layer with themed highlight | ✅ Done        | ➕   | `position: absolute; inset: 0`; radial-gradient glow tracks cursor; opacity 0.5 on hover, 0 on press/idle |
+| OnHover           | Hover state subscription                            | ⏳ Planned     | ➕   | `useHover` hook                                                                                           |
+| OnDrag            | Pointer drag tracking with delta and position       | ⏳ Planned     | ➕   | `useDrag` hook using Pointer Events                                                                       |
+| MouseTracker      | Global pointer position tracking                    | ⏳ Planned     | 🔁   | `usePointerPosition` hook                                                                                 |
+| MousePredictor    | Predictive pointer position to mask input latency   | ❌ Not porting | ➖   | A Roblox network-latency concern; not applicable on web                                                   |
