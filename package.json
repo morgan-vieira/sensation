@@ -43,6 +43,7 @@
 		"dev:css": "tailwindcss -i src/style.css -o dist/style.css --watch",
 		"test": "vitest",
 		"test:run": "vitest run",
+		"check": "npm run test:run && npm run storybook:build && npm run format:check",
 		"typecheck": "tsc --noEmit",
 		"format": "prettier --write .",
 		"format:check": "prettier --check .",

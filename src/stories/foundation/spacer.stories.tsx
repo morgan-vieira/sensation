@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite"
-import { Spacer } from "./spacer"
+import { Spacer } from "../../foundation/spacer"
 
 const meta: Meta<typeof Spacer> = {
 	title: "Foundation/Spacer",

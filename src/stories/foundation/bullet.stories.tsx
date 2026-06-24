@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite"
-import { Bullet } from "./bullet"
+import { Bullet } from "../../foundation/bullet"
 
 const meta: Meta<typeof Bullet> = {
 	title: "Foundation/Bullet",

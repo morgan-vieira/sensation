@@ -2,7 +2,7 @@
 
 ## Task Completion Requirements
 
-- `npm run format:check` must pass before considering tasks completed.
+- `npm run check` must pass before considering tasks completed.
 
 ## Project Snapshop
 
